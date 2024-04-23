@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className="text-4xl p-2" >Next UI</h1>
       </div>
       <br></br>
-      <div className="flex items-center ">
+      <div className="flex items-center justify-center flex-wrap ">
         <div className="p-5">
           <Button color="primary" size="sm" onClick={()=>router.push('/avtar')} >
             Avtar Task
@@ -38,8 +38,42 @@ export default function Home() {
           Breadcrumbs
           </Button>
         </div>
+        <div className="p-5" >
+          <Button size="lg" color="default" onClick={()=>router.push('/card')}  >
+          card
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="md" color="danger" onClick={()=>router.push('/checkbox_task')}  >
+          Checkbox
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="sm" color="success" onClick={()=>router.push('/chip')}  >
+          Chip
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="lg" color="secondary" onClick={()=>router.push('/input_task')}  >
+          Input Form Task
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="md" color="primary" onClick={()=>router.push('/cir_task')}  >
+          Circular Progress
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="sm" color="success" onClick={()=>router.push('/calender_task')}  >
+           Celender
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="lg" onClick={()=>router.push('/dropdown_task')}  >
+           DropDown
+          </Button>
+        </div>
       </div>
-
     </>
   );
 }
