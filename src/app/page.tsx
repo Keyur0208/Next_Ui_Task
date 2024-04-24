@@ -70,7 +70,32 @@ export default function Home() {
         </div>
         <div className="p-5" >
           <Button size="lg" onClick={()=>router.push('/dropdown_task')}  >
-           DropDown
+           DropDown,Image,KBD,Link
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="md" color="warning" onClick={()=>router.push('/listbox_task')}  >
+           ListBox
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="sm" color="danger" onClick={()=>router.push('/navbar_task')}  >
+           Navbar Task
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="lg" color="primary" onClick={()=>router.push('/popover_task')}  >
+          Popover Task
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="md" color="secondary" onClick={()=>router.push('/skeleton_task')}  >
+          Skeleton Task , Snippat ,  Scroll-Shadow
+          </Button>
+        </div>
+        <div className="p-5" >
+          <Button size="md" color="warning" onClick={()=>router.push('/switch')}  >
+          Switch Task
           </Button>
         </div>
       </div>

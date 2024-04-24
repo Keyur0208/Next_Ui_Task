@@ -1,8 +1,8 @@
 "use client"
-import { CalendarToday, TimeToLeave, Visibility, VisibilityOff } from "@mui/icons-material";
-import { DateRangePicker,Button, CalendarDate, DateInput, DatePicker, Input, TimeInput } from "@nextui-org/react";
+import { CalendarToday, StarRounded, TimeToLeave, Visibility, VisibilityOff } from "@mui/icons-material";
+import { DateRangePicker, Button, CalendarDate, DateInput, DatePicker, Input, TimeInput, Select, SelectItem } from "@nextui-org/react";
 import { useState } from "react";
-import {parseZonedDateTime} from "@internationalized/date";
+import { parseZonedDateTime } from "@internationalized/date";
 
 
 export default function Page() {
@@ -15,9 +15,8 @@ export default function Page() {
 
     const [password, setpassword] = useState("")
 
-    function showdata()
-    {
-        alert(email +"\n"+ password);
+    function showdata() {
+        alert(email + "\n" + password);
     }
 
     return (
@@ -54,41 +53,56 @@ export default function Page() {
                         value={password}
                         onChange={(e) => setpassword(e.target.value)}
                     />
-                    <DateInput 
-                    isRequired
-                    label={"Birth date"} 
-                    className="max-w-xs p-3"
-                    startContent={<CalendarToday/>}
+                    <DateInput
+                        isRequired
+                        label={"Birth date"}
+                        className="max-w-xs p-3"
+                        startContent={<CalendarToday />}
                     />
-                    <TimeInput 
-                    isRequired
-                    label="Time"
-                    className="max-w-xs p-3"
-                    startContent={<TimeToLeave/>} 
+                    <TimeInput
+                        isRequired
+                        label="Time"
+                        className="max-w-xs p-3"
+                        startContent={<TimeToLeave />}
                     />
                     <DatePicker
-                    isRequired
-                    variant="underlined"
-                    className="max-w-xs p-3"
+                        isRequired
+                        variant="underlined"
+                        className="max-w-xs p-3"
                     />
-                    <DateRangePicker 
-                    label="Event duration"
-                    hideTimeZone
-                    visibleMonths={2}
-                    defaultValue={{
-                      start: parseZonedDateTime("2024-04-01T00:45[America/Los_Angeles]"),
-                      end: parseZonedDateTime("2024-04-08T11:15[America/Los_Angeles]"),
-                    }}
-                    className="w-50 p-3"
+                    <DateRangePicker
+                        label="Event duration"
+                        hideTimeZone
+                        visibleMonths={2}
+                        defaultValue={{
+                            start: parseZonedDateTime("2024-04-01T00:45[America/Los_Angeles]"),
+                            end: parseZonedDateTime("2024-04-08T11:15[America/Los_Angeles]"),
+                        }}
+                        className="w-50 p-3"
+                    />
+                    <Select
+                        color="danger"
+                        isRequired
+                        scrollShadowProps={{
+                            isEnabled: false
+                          }}
+                        label="Favorite Animal"
+                        placeholder="Select an Animal"
+                        selectionMode="multiple"
+                        className="max-w-xs p-3">
+                            
+                        <SelectItem color="danger" >Student</SelectItem>
+                        <SelectItem color="danger" 
+                        startContent={<StarRounded/>}
+                        >Teacher</SelectItem>
+                    </Select>
 
-                    />
-                    
                     <div className="p-3" >
-                        <Button 
-                        color="primary"
-                        className="w-50"
-                        onClick={showdata}
-                        
+                        <Button
+                            color="primary"
+                            className="w-50"
+                            onClick={showdata}
+
                         >Submit
                         </Button>
                     </div>

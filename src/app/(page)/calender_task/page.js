@@ -32,8 +32,8 @@ export default function page() {
             <div className="p-5">
                 <Calendar
                 aria-label="Date (Uncontrolled)"
-                minValue={today(getLocalTimeZone())}
-                defaultValue={today(getLocalTimeZone())}
+                showShadow
+                showMonthAndYearPickers
                  />
             </div>
             <div className="p-5">
